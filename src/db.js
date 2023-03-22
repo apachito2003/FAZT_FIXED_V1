@@ -1,5 +1,6 @@
-import { connect } from "mongoose";
+import { connect, mongoose } from "mongoose";
 import { MONGODB_URI } from "./config";
+mongoose.set('strictQuery', true);
 
 export const connectDB = async () => {
   try {
